@@ -18,9 +18,13 @@ export default {
           type: DataTypes.TEXT,
           allowNull: false,
         },
-        event_date: {
+        event_start_datetime: {
           type: DataTypes.DATE,
           allowNull: false,
+        },
+        event_end_datetime: {
+          type: DataTypes.DATE,
+          allowNull: true,
         },
         scaape_event_id: {
           type: DataTypes.UUID,
@@ -77,6 +81,11 @@ export default {
         number_of_seats: {
           type: DataTypes.INTEGER,
           allowNull: true,
+        },
+        is_featured: {
+          type: DataTypes.BOOLEAN,
+          allowNull: false,
+          defaultValue: false,
         },
         created_at: {
           type: DataTypes.DATE,
