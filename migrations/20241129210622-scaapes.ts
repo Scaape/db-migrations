@@ -74,6 +74,10 @@ export default {
           type: DataTypes.INTEGER,
           allowNull: true,
         },
+        number_of_seats: {
+          type: DataTypes.INTEGER,
+          allowNull: true,
+        },
         created_at: {
           type: DataTypes.DATE,
           allowNull: false,
