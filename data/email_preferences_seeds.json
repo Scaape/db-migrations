@@ -1,0 +1,44 @@
+[
+  {
+    "description": "Includes people joining, leaving, probation end, birthdays and anniversaries",
+    "title": "Weekly event summary",
+    "created_at": "2023-01-02T09:05:36.662664",
+    "updated_at": "2023-01-02T09:05:36.662664",
+    "id": "e95d323d-0744-4450-9591-34d7598a8e39"
+  },
+  {
+    "description": "Includes time off, sick leave, working from home and more",
+    "title": "Your direct reports registering or cancelling time away",
+    "created_at": "2023-01-02T09:05:47.661406",
+    "updated_at": "2023-01-02T09:05:47.661406",
+    "id": "672bad4d-b255-44fe-9fbc-3b4da66ab671"
+  },
+  {
+    "description": "Includes time off, sick leave, working from home and more",
+    "title": "Employees with no line manager registering or cancelling time away",
+    "created_at": "2023-01-02T09:05:58.744759",
+    "updated_at": "2023-01-02T09:05:58.744759",
+    "id": "59e7989d-0475-4bc0-be52-ca673ae0d6ab"
+  },
+  {
+    "description": "Get notified when an employee with no manager submits a timesheet for review",
+    "title": "Employees with no line manager submitting a timesheet",
+    "created_at": "2023-01-02T09:06:09.35814",
+    "updated_at": "2023-01-02T09:06:09.35814",
+    "id": "4c7959ba-e547-4c9f-96e8-c1572be34712"
+  },
+  {
+    "description": "Get notified when an employee updates profile details that could affect payroll",
+    "title": "Employees changing their address and banking details",
+    "created_at": "2023-01-02T09:06:20.450531",
+    "updated_at": "2023-01-02T09:06:20.450531",
+    "id": "b04c5b49-df8d-420b-9478-652d55184ba0"
+  },
+  {
+    "description": "New tasks assigned to you",
+    "title": "Tasks assigned to you",
+    "created_at": "2023-01-02T09:06:31.930357",
+    "updated_at": "2023-01-02T09:06:31.930357",
+    "id": "f4aa2e3a-4547-4fdc-9b9a-8b6e0eb41ae3"
+  }
+]

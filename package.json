@@ -1,0 +1,51 @@
+{
+  "name": "scaape-migrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --skipLibCheck -p tsconfig.json --noEmit && eslint --cache --fix",
+    "prepare": "husky install",
+    "start": "nodemon --watch '**' --ext 'ts,json' --ignore '**/*.spec.ts' --config nodemon.json --exec 'ts-node index.local.ts'"
+  },
+  "author": "fazenecture",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/pg": "^8.6.6",
+    "@types/pino": "^7.0.5",
+    "@types/request": "^2.48.8",
+    "@types/sequelize": "^4.28.14",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.9.9"
+  },
+  "dependencies": {
+    "pg": "^8.8.0",
+    "pino": "^8.8.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2",
+    "wait-for-stuff": "^1.4.0",
+    "webpack": "^5.19.0",
+    "yup": "^0.32.11"
+  },
+  "lint-staged": {
+    "*.ts": "yarn lint",
+    "*.js": "eslint --cache --fix",
+    "*.--fix": "prettier --write"
+  }
+}
