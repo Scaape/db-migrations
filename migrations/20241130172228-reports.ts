@@ -11,18 +11,42 @@ export default {
       reporter_id: {
         type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       reported_user_id: {
         type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       reported_event_id: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "scaapes",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       reports_reason_id: {
         type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "reports_reason",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       details: {
         type: DataTypes.TEXT,
@@ -40,6 +64,12 @@ export default {
       created_by: {
         type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       updated_at: {
         type: DataTypes.DATE,
@@ -48,6 +78,12 @@ export default {
       updated_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       deleted_at: {
         type: DataTypes.DATE,
@@ -56,6 +92,12 @@ export default {
       deleted_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
     });
   },

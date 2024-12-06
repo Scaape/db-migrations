@@ -13,8 +13,14 @@ export default {
         allowNull: false,
       },
       user_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "users", // Table name
+          key: "id", // Column in the referenced table
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       partner: {
         type: DataTypes.STRING,
@@ -28,6 +34,12 @@ export default {
       created_by: {
         type: DataTypes.UUID,
         allowNull: false,
+        references: {
+          model: "users", // Table name
+          key: "id", // Column in the referenced table
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       updated_at: {
         type: DataTypes.DATE,
@@ -36,6 +48,12 @@ export default {
       updated_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users", // Table name
+          key: "id", // Column in the referenced table
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       deleted_at: {
         type: DataTypes.DATE,
@@ -44,6 +62,12 @@ export default {
       deleted_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users", // Table name
+          key: "id", // Column in the referenced table
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
     });
   },

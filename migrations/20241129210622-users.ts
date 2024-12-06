@@ -70,7 +70,13 @@ export default {
       },
       created_by: {
         type: DataTypes.UUID,
-        allowNull: false,
+        allowNull: true,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       updated_at: {
         type: DataTypes.DATE,
@@ -79,6 +85,12 @@ export default {
       updated_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       deleted_at: {
         type: DataTypes.DATE,
@@ -87,6 +99,12 @@ export default {
       deleted_by: {
         type: DataTypes.UUID,
         allowNull: true,
+        references: {
+          model: "users",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
     });
   },
