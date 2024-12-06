@@ -48,6 +48,14 @@ export default {
         type: DataTypes.DATE,
         allowNull: true,
       },
+      attendance_status: {
+        type: DataTypes.ENUM("attending", "absent", "pending"),
+        allowNull: true,
+      },
+      attendance_at: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
       created_at: {
         type: DataTypes.DATE,
         allowNull: false,
