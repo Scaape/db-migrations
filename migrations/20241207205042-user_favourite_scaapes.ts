@@ -31,6 +31,11 @@ export default {
           onUpdate: "CASCADE",
           onDelete: "CASCADE",
         },
+        is_favourite: {
+          type: DataTypes.BOOLEAN,
+          allowNull: false,
+          defaultValue: true,
+        },
         created_at: {
           type: DataTypes.DATE,
           allowNull: false,
